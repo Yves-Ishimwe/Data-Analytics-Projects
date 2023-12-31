@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Application for Breast Cancer Recognition</title>
+		<style type="text/css">
+		body {
+		  color: black;
+		}
+
+		h2 {
+		  color: black;
+		}
+		p{
+			color:black;
+			text-align: justify;
+		}
+		.results{
+			color:blue;
+		}
+		.introdiv {
+			margin: auto;
+			height: 160px;
+			width: 60%;
+			background-color: lightblue;
+			text-align: left;
+			padding: 8px;
+		}
+
+		.resultdiv {
+			margin: auto;
+			height: 160px;
+			width: 60%;
+			background-color: ivory;
+			text-align: left;
+			padding: 8px;
+		}
+		.center {
+		  margin: auto;
+		  width: 60%;
+		  height: 85%;
+		  border: 1px dashed blue;
+		  padding: 15px;
+		  background-color: lavender;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div class="introdiv">
+				<h2>Application for Customers Segmentation and Classification</h2>
+				<p>This is an application used by banks or financial entities who desire to segment their clients based on predictive models using Machine Learning as an important tool to improve their marketing strategies. The clients are classified into three categories based on 17 different finincial records.
+			</p>
+
+			</div>
+	
+
+			<div class="resultdiv">
+				<!--https://flask.palletsprojects.com/en/2.3.x/patterns/flashing/-->
+				<h2>Display Prediction Results</h2>
+                <p class="results"> Predicted category(directly from variable): <span style="color:{{color_signal}};"> {{prediction}}</span><p></p>
+
+				{% with messages = get_flashed_messages() %}
+					  {% if messages %}
+						<p class="results">Customer category based on your input(By retrieving from flashed messages): <span style="color:{{ messages[1] }};">{{ messages[0] }}</span><p>
+	
+					  {% endif %}
+					{% endwith %}
+
+			</div>
+		</div>
+	</body>
+</html>
