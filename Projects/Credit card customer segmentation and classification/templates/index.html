@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Application for Customers Segmentation and Classification</title>
+		<style type="text/css">
+		body {
+		  color: black;
+		}
+
+		h2 {
+		  color: black;
+		}
+		p{
+			color:black;
+			text-align: justify;
+		}
+		.results{
+			color:green;
+		}
+		.introdiv {
+			margin: auto;
+			height: 160px;
+			width: 60%;
+			background-color: lightgreen;
+			text-align: left;
+			padding: 8px;
+		}
+
+		.formdiv {
+			margin: auto;
+			height: 680px;
+			width: 90%;
+			background-color: gray;
+			padding: 16px;
+
+		}
+
+		.center {
+		  margin: auto;
+		  width: 60%;
+		  height: 100%;
+		  border: 8px dashed green;
+		  padding: 16px;
+		  background-color: lavender;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div class="introdiv">
+				<h2>Application for Customers Segmentation and Classification</h2>
+				<p>This is an application used by banks or financial entities who desire to segment their clients based on predictive models using Machine Learning as an important tool to improve their marketing strategies. The clients are classified into three categories based on 17 different finincial records.
+			</p>
+
+			</div>
+	
+			<!--
+			1. Account Balance:               
+            2. How frequently the Balance is updated:       0 - 1
+            3. Amount of purchases made from account:      
+            4. Maximum purchase amount done in one-go:             
+            5. Amount of purchase done in installment:
+            6. Cash in advance given by the user:    
+            7. How frequently the Purchases are being made:                   0 - 1
+            8. How frequently Purchases are happening in one-go:               0 - 1
+            9. How frequently purchases in installments are being done:               0 - 1
+            10. How frequently the cash in advance being paid:                      
+            11. Number of Transactions made with "Cash in Advanced":
+            12. Number of purchase transactions made:
+            13. Limit of Credit Card for user: 
+            14. Amount of Payment done by user:
+            15. Minimum amount of payments made by user:
+            16. Percent of full payment paid by user:
+            17. Tenure of credit card service for user:
+            
+
+			-->
+			<div class="formdiv">
+				<h2>Provide values</h2>
+				<form method="post" action="/predict" enctype="multipart/form-data">
+					<p>  <label for="">Account Balance:</label>
+						<input type="text" name="BALANCE"  required>
+					</p>
+					<p>  <label for="">How frequently the Balance is updated:       0 - 1</label>
+            			<input type="text" name="BALANCE_FREQUENCY"  required>
+            		</p>
+					<p>  <label for="">Amount of purchases made from account:</label>
+						<input type="text" name="PURCHASES"  required>
+					</p>
+					<p>  <label for="">Maximum purchase amount done in one-go:</label>
+            			<input type="text" name="ONEOFF_PURCHASES"  required>
+            		</p>
+					<p>  <label for="">Amount of purchase done in installment:</label>
+						<input type="text" name="INSTALLMENTS_PURCHASES"  required>
+					</p>
+					<p>  <label for="">Cash in advance given by the user:</label>
+						<input type="text" name="CASH_ADVANCE"  required>
+					</p>
+					<p>  <label for="">How frequently the Purchases are being made:                 0 - 1</label>
+            			<input type="text" name="PURCHASES_FREQUENCY"  required>
+            		</p>
+					<p>  <label for="">How frequently Purchases are happening in one-go:               0 - 1</label>
+						<input type="text" name="ONEOFF_PURCHASES_FREQUENCY"  required>
+					</p>
+					<p>  <label for="">How frequently purchases in installments are being done:               0 - 1</label>
+            			<input type="text" name="PURCHASES_INSTALLMENTS_FREQUENCY"  required>
+            		</p>	
+					<p><label for="">How frequently the cash in advance being paid:</label>
+					<input type="text" name="CASH_ADVANCE_FREQUENCY" required>
+					</p>
+					<p>  <label for="">Number of Transactions made with "Cash in Advanced":</label>
+						<input type="text" name="CASH_ADVANCE_TRX"  required>
+					</p>
+					<p>  <label for="">Number of purchase transactions made":</label>
+            			<input type="text" name="PURCHASES_TRX"  required>
+            		</p>	
+					<p>  <label for="">Limit of Credit Card for user:</label>
+						<input type="text" name="CREDIT_LIMIT"  required>
+					</p>
+					<p>  <label for="">Amount of Payment done by user:</label>
+            			<input type="text" name="PAYMENTS"  required>
+            		</p>	
+					<p>  <label for="">Minimum amount of payments made by user:</label>
+						<input type="text" name="MINIMUM_PAYMENTS"  required>
+					</p>
+					<p>  <label for="">Percent of full payment paid by user:</label>
+            			<input type="text" name="PRC_FULL_PAYMENT"  required>
+            		</p>	
+					<p>  <label for="">Tenure of credit card service for user:</label>
+            			<input type="text" name="TENURE"  required>
+            		</p>	
+					<p>
+					<input type="submit" value="Submit">
+					</p>
+				</form>
+			</div>
+
+		</div>
+	</body>
+</html>
